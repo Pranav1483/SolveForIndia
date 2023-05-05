@@ -19,7 +19,7 @@ function QRCodePage() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetch('http://localhost:8000/userapp/api/user/addpdt/', {
+    fetch('https://blockchain-qrdk.onrender.com/userapp/api/user/addpdt/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ username: user.username, hash: qrCodeData })

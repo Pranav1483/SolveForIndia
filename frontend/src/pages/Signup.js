@@ -19,7 +19,7 @@ function SignupPage() {
       setError('Passwords do not match');
       return;
     }
-    fetch('http://localhost:8000/userapp/api/user/register/', {
+    fetch('https://blockchain-qrdk.onrender.com/userapp/api/user/register/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({

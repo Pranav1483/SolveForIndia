@@ -31,7 +31,7 @@ function Dashboard(props) {
             pathname: '/'
           });
         }
-        fetch('http://localhost:8000/userapp/api/user/' + localStorage.getItem('isLoggedIn'))
+        fetch('https://blockchain-qrdk.onrender.com/userapp/api/user/' + localStorage.getItem('isLoggedIn'))
           .then(response => response.json())
           .then(data => {
             setObj(data);

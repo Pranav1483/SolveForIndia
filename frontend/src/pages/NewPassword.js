@@ -23,7 +23,7 @@ function NewPasswordPage() {
       return;
     }
 
-    fetch('http://localhost:8000/userapp/api/user/changepwd/', {
+    fetch('https://blockchain-qrdk.onrender.com/userapp/api/user/changepwd/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email: email, new_password: password })

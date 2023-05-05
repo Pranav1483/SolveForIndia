@@ -18,7 +18,7 @@ function ReportPage() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        fetch('http://localhost:8000/userapp/api/user/report/', {
+        fetch('https://blockchain-qrdk.onrender.com/userapp/api/user/report/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ username: user.username, location: loc, report: report})

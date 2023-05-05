@@ -16,7 +16,7 @@ function OtpPage() {
   
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetch('http://localhost:8000/userapp/api/user/verifyotp/', {
+    fetch('https://blockchain-qrdk.onrender.com/userapp/api/user/verifyotp/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ otp: otp, otp_from_user: entered_otp })

@@ -10,7 +10,7 @@ function ForgotPasswordPage() {
 
   const handleEmailSubmit = (event) => {
     event.preventDefault();
-    fetch('http://localhost:8000/userapp/api/user/sendotp/', {
+    fetch('https://blockchain-qrdk.onrender.com/userapp/api/user/sendotp/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email: email, otp: otp.toString() })

@@ -149,9 +149,6 @@ EMAIL_PORT = 587
 EMAIL_HOST_USER = "pranavpulparambil@gmail.com"
 EMAIL_HOST_PASSWORD = "n1k7FBtgqEwvD84Q"
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
-]
 
 CORS_ALLOW_METHODS = [    'DELETE',    'GET',    'OPTIONS',    'PATCH',    'POST',    'PUT',]
 
