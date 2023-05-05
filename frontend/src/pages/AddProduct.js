@@ -72,12 +72,13 @@ function QRCodePage() {
         const code = jsQR(imageData.data, imageData.width, imageData.height);
         if (code) {
           setQRCodeData(code.data);
+          reader.readAsDataURL(file);
         } else {
           setQRCodeData('No QR code found.');
         }
       };
     };
-    reader.readAsDataURL(file);
+    
   };
 
   return (
