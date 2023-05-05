@@ -57,6 +57,9 @@ function QRCodePage() {
 
   const handleImageUpload = (event) => {
     const file = event.target.files[0];
+    if (!file){
+      return;
+    }
     const reader = new FileReader();
     reader.onload = (event) => {
       const image = new Image();
@@ -72,13 +75,12 @@ function QRCodePage() {
         const code = jsQR(imageData.data, imageData.width, imageData.height);
         if (code) {
           setQRCodeData(code.data);
-          reader.readAsDataURL(file);
         } else {
           setQRCodeData('No QR code found.');
         }
       };
     };
-    
+    reader.readAsDataURL(file);
   };
 
   return (
