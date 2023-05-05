@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> FORGOT PASSWORD </title>
+</head>
+<body>
+    <div class = 'Forgot Password'>
+        <form action="1/", method="post">
+            {% csrf_token %}
+            <label for="Email"><b>Email: </b></label>
+            <input type="text" id="email" name="email">
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

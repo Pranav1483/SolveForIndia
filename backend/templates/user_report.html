@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Report Product</title>
+    </head>
+    <body>
+        <h1>Report Product</h1>
+        <div class="Report">
+            <form action="1/", method="post">
+                {% csrf_token %}
+                <label for="Location"><b>Location: </b></label>
+                <input type="text" id="Location" name="Location"><br><br>
+                <label for="Report"><b>Report: </b></label>
+                <input type="text" id="Report" name="Report"><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </body>
+</html>

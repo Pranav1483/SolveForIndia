@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> CREATE PRODUCT </title>
+</head>
+<body>
+    <h1>DETAILS</h1>
+    <form action="1/", method="post">
+        {% csrf_token %}
+        <label for="pd_id"><b>Product ID: </b></label>
+        <input type="text" id="pd_id" name="pd_id">
+        <br><br>
+        <label for="batch_id"><b>Batch ID: </b></label>
+        <input type="text" id="batch_id" name="batch_id">
+        <br><br>
+        <label for="item"><b>Item: </b></label>
+        <input type="text" id="item" name="item">
+        <br><br>
+        <label for="size"><b>Size: </b></label>
+        <input type="text" id="size" name="size">
+        <br><br>
+        <label for="colour"><b>Colour: </b></label>
+        <input type="text" id="colour" name="colour">
+        <br><br>
+        <input type="submit" value="Create">
+    </form>
+    <a style="position: absolute; right: 10px; top: 0px;" href="back/">Back</a>
+</body>
+</html>

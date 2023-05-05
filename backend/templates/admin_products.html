@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> PRODUCTS </title>
+    </head>
+    <body>
+        <h1>Products</h1>
+        <table border="5">
+            <tr>
+                <td>Owner</td>
+                <td>Product ID</td>
+                <td>Batch ID</td>
+                <td>Item</td>
+                <td>Size</td>
+                <td>Colour</td>
+                <td>Time Created</td>
+                <td>Hash Key</td>
+            </tr>
+            {% for obj in block %}
+            <tr>
+                <td>{{obj.owner}}</td>
+                <td>{{obj.pd_id}}</td>
+                <td>{{obj.batch_id}}</td>
+                <td>{{obj.product_details.Item}}</td>
+                <td>{{obj.product_details.Size}}</td>
+                <td>{{obj.product_details.Colour}}</td>
+                <td>{{obj.timestamp}}</td>
+                <td>{{obj.hash_code}}</td>
+                <td><a href="delete/{{ obj.id }}">Delete</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+        <br><br>
+        <form action="", method="post">
+            {% csrf_token %}
+            <label for="Uname"><b>Filter by Username: </b></label>
+            <input type="text" id="Uname" name="Uname">
+            <br><br>
+            <input type="submit" value="Filter">
+        </form>
+        <a style="position: absolute; right: 10px; top: 0px;" href="back/">Back</a>
+    </body>
+</html>

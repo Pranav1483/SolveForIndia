@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> ENTER OTP </title>
+</head>
+<body>
+    <div class = 'OTP Form'>
+        <form action="2/", method="post">
+            {% csrf_token %}
+            <label for="OTP"><b>OTP: </b></label>
+            <input type="text" id="otp" name="otp">
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <a href="resend/">Resend OTP</a>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>{{obj.username}}</head>
+    <body>
+        <h1>Welcome {{obj.first_name}} {{obj.last_name}}</h1>
+        <a style="position: absolute; right: 10px; top: 0px;" href="logout/">Logout</a>
+        <table border="5">
+            <tr>
+                <td>Item</td>
+                <td>Size</td>
+                <td>Colour</td>
+                <td>Manufactured</td>
+            </tr>
+            {% for item in obj.products %}
+            <tr>
+                <td>{{item.product_details.Item}}</td>
+                <td>{{item.product_details.Size}}</td>
+                <td>{{item.product_details.Colour}}</td>
+                <td>{{item.timestamp}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="report/">Report Fake Product</a>
+        <a href="addproduct/">Add Product</a>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> ENTER NEW PASSWORD </title>
+</head>
+<body>
+    <div class = 'New Password Form'>
+        <form action="3/", method="post">
+            {% csrf_token %}
+            <label for="Password"><b>New Password: </b></label>
+            <input type="text" id="password" name="password">
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>

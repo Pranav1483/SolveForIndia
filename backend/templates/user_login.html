@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> USER </title>
+</head>
+<body>
+    <h1>USER</h1>
+    <div class = 'Login'>
+        <form action="dashboard/", method="post">
+            {% csrf_token %}
+            <label for="Uname"><b>Username: </b></label>
+            <input type="text" id="Uname" name="Uname">
+            <br><br>
+            <label for="Password"><b>Password: </b></label>
+            <input type="password" id="Password" name="Password">
+            <br><br>
+            <input type="submit" value="Login">
+        </form>
+        <a href="register/">Register User</a>
+        <a href="forgotpwd/">Forgot Password</a>
+    </div>
+</body>
+</html>
