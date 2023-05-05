@@ -9,7 +9,7 @@ function LoginPage() {
   const navigate = useNavigate();
   useEffect(() => {
     const isLoggedIn = localStorage.getItem('isLoggedIn');
-    if (isLoggedIn != 'false') {
+    if ((isLoggedIn != 'false') && (isLoggedIn))  {
       navigate({
         pathname: '/dashboard',
         state: { user: isLoggedIn }
